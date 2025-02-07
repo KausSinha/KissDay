@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiss Day</title>
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      background-color: #ffdde1;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: #b71c1c;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 80%;
+    }
+    .envelope {
+      cursor: pointer;
+      font-size: 80px;
+      transition: transform 0.3s ease;
+    }
+    .envelope:hover {
+      transform: scale(1.2);
+    }
+    .message {
+      display: none;
+      font-size: 40px;
+      margin-top: 30px;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .quote {
+      font-style: italic;
+      font-size: 30px;
+      margin-top: 20px;
+      color: #d32f2f;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="envelope" onclick="showMessage()">💌</div>
+    <div class="message" id="message">
+      <p>"Every time I see you, I want to pull you closer and kiss you deeply. You are my forever love. 😘"</p>
+      <p class="quote">"A kiss is a lovely trick designed by nature to stop speech when words become superfluous."<br> Happy Kiss Day my Sensual Girl💓</p>
+<img class="animation" id="animation" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3o5bWZhM3RlNmczeTU5ZGpsYzBjNGRvdzN6bjE4ZnNubzM2ZjhlOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vi0Ws3t4JSLOgdkaBq/giphy.gif" alt="Kiss">
+
+    </div>
+  </div>
+  
+  <script>
+    function showMessage() {
+      document.querySelector('.envelope').style.display = 'none';
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
